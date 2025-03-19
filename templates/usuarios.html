@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gestion de usuarios</title><br>
+</head>
+<body>
+    <h3>gestion de usuarios</h3>
+    <a href="/nuevousuario">agregar un usuario nuevo</a>
+    <table border="">
+        <thead>
+            <td>operaciones</td>
+        </thead>
+        <tbody>
+            {% for p in usua %}
+            <tr>
+                <td>{{p[0]}}</td>
+                <td>{{p[1]}}</td>
+                <td>{{p[3]}}</td>
+                <td>
+                    <a href="/editarusuario/{{p[0]}}">editar</a>
+                    <a onclick="return confirm('¿seguro quiere eliminar este usuario?')"href ="/borrausuario/{{p[0]}}">Borrar</a>
+                </td>    
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Digite los datos del nuevo usuario</h4><br>
+    <form action="/guardausuario">method="POST">
+        <label for="id">Id pacientes</label>
+        <input type="text" required name="id" id="id"><br>
+        <label for="nom">Nombre</label>
+        <label type="text" required name="nom"></label>
+        <input for="email">Email: </label>
+        <label type="text" name="email"><br>
+        <input for="contra">Contraseña: </label>
+        <input type="password" name="contra" id="contra" required>
+        <br><br>
+        <button>Guardar</button> <br><br><br>
+
+        <button>Cancelar</button> <br>
+        <h3>{{msg}}</h3>
+    </form>
+    
+</body>
+</html>
